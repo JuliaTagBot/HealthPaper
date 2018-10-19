@@ -8,5 +8,5 @@
 #SBATCH --mail-user=panagiotis.margaris@hhs.se
 source $HOME/bin/julia-1.0.1/julia-environment
 cd /home/pmarg/Projects/Medicare/src
-julia -L HealthPaper.jl
+julia --project=. main.jl
 echo Job Completed

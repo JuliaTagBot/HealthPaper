@@ -5,14 +5,14 @@ Description
 """
 function VFI(IG::InitialGuess,w::Float64, r::Float64, T::Float64, ss::Float64, τw::Float64,P::Params)
 
-    @everywhere n_a    = P.grid.n_a
-    @everywhere n_h    = P.grid.n_h
-    @everywhere n_zl   = P.grid.n_zl
-    @everywhere n_zh = P.grid.n_zh
-    @everywhere a_grid = P.grid.a_grid
-    @everywhere n_age  = P.D.n_age
-    @everywhere R_age  = P.D.R_age
-    @everywhere τa     = P.G.τa
+    n_a    = P.grid.n_a
+    n_h    = P.grid.n_h
+    n_zl   = P.grid.n_zl
+    n_zh = P.grid.n_zh
+    a_grid = P.grid.a_grid
+    n_age  = P.D.n_age
+    R_age  = P.D.R_age
+    τa     = P.G.τa
 
     v0   = SharedArray(zeros(n_a, n_h, n_zl, n_zh))
 
